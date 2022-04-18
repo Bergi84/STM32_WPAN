@@ -25,6 +25,9 @@
 #include "tl.h"
 #include <string.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* Exported functions  ------------------------------------------------------------*/
 void Pre_ZigbeeCmdProcessing(void);
@@ -36,5 +39,8 @@ Zigbee_Cmd_Request_t* ZIGBEE_Get_M0RequestPayloadBuffer(void);
 
 /* Exported defines -----------------------------------------------------------*/
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __TL_ZIGBEE_HCI_H_*/
