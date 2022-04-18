@@ -39,6 +39,7 @@
 #include "pletoh.h" /* Little endian conversion */
 #include "llist.h" /* Link list */
 #include "ieee802154_enums.h"
+#include "zcl/zcl.enum.h"
 
 /* Zigbee instance */
 struct ZigBeeT;
