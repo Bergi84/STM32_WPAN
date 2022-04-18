@@ -1,12 +1,12 @@
 /*****************************************************************************
  * @file    ble_types.h
- * @author  MCD
+ * @author  MDG
  * @brief   STM32WB BLE command/event types
  *          Auto-generated file: do not edit!
  *****************************************************************************
  * @attention
  *
- * Copyright (c) 2018-2021 STMicroelectronics.
+ * Copyright (c) 2018-2022 STMicroelectronics.
  * All rights reserved.
  *
  * This software is licensed under terms that can be found in the LICENSE file
@@ -1145,6 +1145,24 @@ typedef PACKED(struct)
 
 typedef PACKED(struct)
 {
+  uint8_t Status;
+  uint16_t RF_TX_Path_Compensation;
+  uint16_t RF_RX_Path_Compensation;
+} hci_le_read_rf_path_compensation_rp0;
+
+typedef PACKED(struct)
+{
+  uint16_t RF_TX_Path_Compensation;
+  uint16_t RF_RX_Path_Compensation;
+} hci_le_write_rf_path_compensation_cp0;
+
+typedef PACKED(struct)
+{
+  uint8_t Status;
+} hci_le_write_rf_path_compensation_rp0;
+
+typedef PACKED(struct)
+{
   uint8_t Peer_Identity_Address_Type;
   uint8_t Peer_Identity_Address[6];
   uint8_t Privacy_Mode;
@@ -1982,6 +2000,17 @@ typedef PACKED(struct)
 {
   uint8_t Status;
 } aci_gap_adv_clear_sets_rp0;
+
+typedef PACKED(struct)
+{
+  uint8_t Advertising_Handle;
+  uint8_t Random_Address[6];
+} aci_gap_adv_set_random_address_cp0;
+
+typedef PACKED(struct)
+{
+  uint8_t Status;
+} aci_gap_adv_set_random_address_rp0;
 
 typedef PACKED(struct)
 {

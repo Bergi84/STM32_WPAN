@@ -8,10 +8,6 @@
 #ifndef ZCL_ENUM_H
 # define ZCL_ENUM_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdint.h>
 #include <inttypes.h>
 #include <stdbool.h>
@@ -732,9 +728,5 @@ struct ZbZclHeaderT {
     uint8_t seqNum;
     uint8_t cmdId;
 };
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif

@@ -12,10 +12,6 @@
 #ifndef ZIGBEE_H
 # define ZIGBEE_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #if defined(__GNUC__)
 # define ZB_WARN_UNUSED __attribute__((warn_unused_result))
 #elif defined(_MSC_VER) && (_MSC_VER >= 1800)
@@ -43,7 +39,6 @@ extern "C" {
 #include "pletoh.h" /* Little endian conversion */
 #include "llist.h" /* Link list */
 #include "ieee802154_enums.h"
-#include "zcl/zcl.enum.h"
 
 /* Zigbee instance */
 struct ZigBeeT;
@@ -640,9 +635,5 @@ unsigned int zb_hex_bin_to_str(const uint8_t *in_data, unsigned int in_len, char
 #include "zigbee.nwk.h"
 #include "zigbee.startup.h"
 #include "zigbee.zdo.h"
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif

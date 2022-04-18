@@ -3,10 +3,6 @@
 #ifndef MCP_ENUMS_H_
 # define MCP_ENUMS_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 /*lint -save -e726 [!MISRA - extra comma ignored (end of enum)] */
 /* IEEE 802.15.4 Status Values */
 enum mcp_status {
@@ -501,9 +497,5 @@ enum {
     || (((type) == MCP_TLV_MIE) && ((id) == (uint8_t)mcp_IEEE802154_MIE_VENDOR_SPECIFIC)))
 
 /*lint -restore */
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif /* MCP_ENUMS_H_ */
